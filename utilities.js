@@ -17,6 +17,13 @@ function updateCaseNumber(isIncrease, field) {
   return newNumber;
 }
 
+function getTextById(field) {
+  const Field = document.getElementById(field);
+  const NumberString = Field.innerText;
+  const previousNumber = parseInt(NumberString);
+  return previousNumber;
+}
+
 function setText(elementId, setText) {
   if (isNaN(setText)) {
     return;
@@ -27,5 +34,9 @@ function setText(elementId, setText) {
 
 function calculatePrice(item1, item2) {
   const totalPrice = item1 * item2;
+  return totalPrice;
+}
+function calculateTotal(item1, item2) {
+  const totalPrice = item1 + item2;
   return totalPrice;
 }
