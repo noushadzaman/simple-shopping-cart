@@ -9,8 +9,11 @@ document.getElementById("btn-case-plus").addEventListener("click", function () {
 
   const total = calculateTotal(mobileTotal, caseTotal);
   setText("sub-total", total);
-  const tax = (total * 0.1).toFixed(1);
+  const taxString = (total * 0.1).toFixed(1);
+  const tax = parseFloat(taxString);
   setText("tax", tax);
+  const mainTotal = calculateTotal(total,tax);
+  setText('total', mainTotal);
 
 });
 
@@ -26,7 +29,10 @@ document
 
     const total = calculateTotal(mobileTotal, caseTotal);
     setText("sub-total", total);
-    const tax = (total * 0.1).toFixed(1);
+    const taxString = (total * 0.1).toFixed(1);
+    const tax = parseFloat(taxString);
     setText("tax", tax);
+    const mainTotal = calculateTotal(total,tax);
+    setText('total', mainTotal);
 
   });
