@@ -1,3 +1,5 @@
+// Easy method without function not connected to html
+
 document
   .getElementById("btn-mobile-plus")
   .addEventListener("click", function () {
@@ -28,3 +30,4 @@ document
 
     previousMobileNumberField.value = newMobileNumber;
   });
+
